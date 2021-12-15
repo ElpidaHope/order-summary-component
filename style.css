@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    font-family: 'Red Hat Display',sans-serif;
+    background-color: var(--pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    min-height: 100vh;
+}
+
+.wrapper{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    max-width: 450px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container-text{
+    padding: 7%;
+}
+
+h1{
+    text-align: center;
+    font-weight: 900;
+}
+
+p{
+    font-weight: 300;
+    color: var(--desaturated-blue);
+    text-align: center;
+    
+}
+
+.pricing{
+    background-color: var(--very-pale-blue);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 25px;
+    justify-content: space-between;
+    /* outline: red solid 5px; */
+}
+
+.prc-img{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.prc-img div{
+    margin-left: 20px;
+}
+
+.pricing > a{
+    font-weight: 700;
+
+}
+.pricing > a:hover{
+    text-decoration: none;
+    color: var(--bright-blue);
+    transition: color .3s ease;
+}
+
+.btn-payment{
+    background-color: var(--bright-blue);
+   border-radius: 12px;
+   margin-top: 30px;
+   padding: 15px;
+   text-align: center;
+   box-shadow: 0px 3px 12px 5px hsl(223, 45%, 22%, .2);
+   display: block;
+}
+
+a.btn-payment{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+}
+
+a.btn-payment:hover{
+    background-color:var(--desaturated-blue);
+    transition: color .3s ease;
+}
+.btn-cancel{
+    text-align: center;
+    margin: 20px;
+    display: block;
+}
+
+a.btn-cancel{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+
+a.btn-cancel:hover{
+    
+    color:var(--dark-blue);
+}
+
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+        color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:425px){
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+
+    }
+    .wrapper{
+        max-width: 87%;
+    }
+
+   .pricing{
+       padding: 12px;
+   }
+
+   .prc-img > div{
+       margin-left: 10px;
+   }
+}
+
